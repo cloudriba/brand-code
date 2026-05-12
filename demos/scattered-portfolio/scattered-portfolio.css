@@ -1,16 +1,16 @@
 /* ===================================
-    Crafto - Scattered portfolio
+    Cloudriba Scattered portfolio
 ====================================== */
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* variable */
 :root {
   --base-color: #ffea00;
   --medium-gray: #838383;
   --light-gray: #cbcbcb;
-  --alt-font: "Playfair Display", serif;
-  --primary-font: "Manrope", sans-serif;
+  --alt-font: 'Playfair Display', serif;
+  --primary-font: 'Manrope', sans-serif;
 }
 /* custom cursor */
 @media (hover: hover) and (pointer: fine) {
@@ -136,23 +136,23 @@ textarea,
     font-size: 12rem;
     line-height: 12rem;
   }
-  .navbar-collapse-show[data-mobile-nav-style="full-screen-menu"]
+  .navbar-collapse-show[data-mobile-nav-style='full-screen-menu']
     .navbar-full-screen-menu-inner {
     background-image: url(../../images/vertical-line-bg-small.svg) !important;
   }
-  [data-mobile-nav-style="full-screen-menu"]
+  [data-mobile-nav-style='full-screen-menu']
     .navbar-full-screen-menu-inner
     .navbar-nav {
     text-align: center;
   }
-  [data-mobile-nav-style="full-screen-menu"]
+  [data-mobile-nav-style='full-screen-menu']
     .navbar-full-screen-menu-inner
     .navbar-nav
     > .nav-item {
     border-bottom: 0;
     padding: 0;
   }
-  [data-mobile-nav-style="full-screen-menu"]
+  [data-mobile-nav-style='full-screen-menu']
     .navbar-full-screen-menu-inner
     .navbar-nav
     .nav-item

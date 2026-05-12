@@ -1,8 +1,8 @@
 /* -------------------------------------------------------
  
- Theme Name: Crafto - The Multipurpose HTML5 Template
- Theme URL: https://craftohtml.asdf.com/
- Description: Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.
+ Theme Name: Cloudriba
+ Theme URL: https://cohtml.asdf.com/
+ Description: Elevate your online presence with Cloudriba.
  Author: - https://www.asdf.com/
  Author ThemeForest URL: https://themeforest.net/user/asdf
  Copyright(c) 2025 asdf.com

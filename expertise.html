@@ -35,6 +35,10 @@
       rel="stylesheet"
       href="demos/scattered-portfolio/scattered-portfolio.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body
     data-mobile-nav-style="full-screen-menu"
@@ -491,33 +495,25 @@
                 <li>
                   <a
                     class="facebook"
-                    href="https://www.facebook.com/"
+                    href="https://www.instagram.com/cloudriba"
                     target="_blank"
-                    >Fb.</a
+                    >Ig.</a
                   >
                 </li>
                 <li>
                   <a
                     class="twitter"
-                    href="https://www.twitter.com"
+                    href="https://wa.me/917695822144"
                     target="_blank"
-                    >Tw.</a
+                    >Wa.</a
                   >
                 </li>
                 <li>
                   <a
                     class="linkedin"
-                    href="http://www.linkedin.com"
+                    href="https://www.linkedin.com/company/cloudriba-digital-agency"
                     target="_blank"
                     >In.</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="behance"
-                    href="http://www.behance.com/"
-                    target="_blank"
-                    >Be.</a
                   >
                 </li>
               </ul>
@@ -528,7 +524,8 @@
     </footer>
     <!-- end footer -->
     <!-- start sticky elements -->
-    <div
+    <!-- mohinth -->
+    <!-- <div
       class="sticky-wrap z-index-1 d-none d-xl-inline-block"
       data-animation-delay="100"
       data-shadow-animation="true"
@@ -569,7 +566,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <!-- end sticky elements -->
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
@@ -579,6 +576,41 @@
       </a>
     </div>
     <!-- end scroll progress -->
+    <!-- Floating Contact Menu -->
+    <div class="contact-fab-container">
+      <button class="contact-fab" id="contactFab" aria-label="Contact Menu">
+        ☎
+      </button>
+
+      <a
+        href="https://wa.me/917695822144"
+        target="_blank"
+        class="fab-action whatsapp"
+        id="whatsappBtn"
+        aria-label="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <a
+        href="https://instagram.com/cloudriba"
+        target="_blank"
+        class="fab-action instagram"
+        id="instagramBtn"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a
+        href="tel:+917695822144"
+        class="fab-action call"
+        id="callBtn"
+        aria-label="Call"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
     <!-- javascript libraries -->
     <script
       data-cfasync="false"
@@ -587,5 +619,31 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/vendors.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const container = document.querySelector('.contact-fab-container');
+        const mainButton = document.getElementById('contactFab');
+
+        mainButton.addEventListener('click', function (e) {
+          e.stopPropagation();
+          container.classList.toggle('open');
+          mainButton.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!container.contains(e.target)) {
+            container.classList.remove('open');
+            mainButton.classList.remove('active');
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            container.classList.remove('open');
+            mainButton.classList.remove('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

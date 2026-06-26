@@ -20023,3 +20023,184 @@ footer .footer-navbar .nav-item:last-child a {
   max-height: 55px !important;
 }
 /*# sourceMappingURL=style.min.css.map */
+/* ==========================================
+   FLOATING CONTACT MENU
+========================================== */
+
+.contact-fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99999;
+}
+
+/* Main Contact Button */
+
+.contact-fab {
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: #0f172a;
+  color: #fff;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+
+  position: relative;
+  z-index: 2;
+}
+
+.contact-fab:hover {
+  transform: scale(1.08);
+}
+
+.contact-fab.active {
+  transform: rotate(45deg);
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.fab-action {
+  position: absolute;
+
+  /* Center all buttons on main FAB */
+  bottom: 5px;
+  right: 5px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 22px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(0, 0) scale(0.5);
+  transform-origin: center;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* Colors */
+
+.whatsapp {
+  background: #25d366;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.call {
+  background: #2563eb;
+}
+
+/* ==========================================
+   OPEN STATE
+========================================== */
+
+.contact-fab-container.open .fab-action {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* WhatsApp - Top */
+
+.contact-fab-container.open .whatsapp {
+  transform: translate(-5px, -100px) scale(1);
+}
+
+/* Instagram - Top Left */
+
+.contact-fab-container.open .instagram {
+  transform: translate(-75px, -75px) scale(1);
+}
+
+/* Call - Left */
+
+.contact-fab-container.open .call {
+  transform: translate(-100px, -5px) scale(1);
+}
+
+/* ==========================================
+   OPTIONAL BACKDROP BLUR
+========================================== */
+
+.contact-fab-container::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+}
+
+.contact-fab-container.open::before {
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .contact-fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .contact-fab {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fab-action {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .contact-fab-container.open .whatsapp {
+    transform: translate(-4px, -90px) scale(1);
+  }
+
+  .contact-fab-container.open .instagram {
+    transform: translate(-70px, -70px) scale(1);
+  }
+
+  .contact-fab-container.open .call {
+    transform: translate(-90px, -4px) scale(1);
+  }
+}
